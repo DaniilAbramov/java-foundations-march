@@ -4,6 +4,8 @@ public class Cup {
     private String color;
     private int volume;
 
+    public Cup() {
+    }
 
     public Cup(String color, int volume) {
         this.color = color;
@@ -25,9 +27,5 @@ public class Cup {
     public void setVolume(int volume) {
         this.volume = volume;
     }
-
-    Cup() {
-    }
-
 
 }
