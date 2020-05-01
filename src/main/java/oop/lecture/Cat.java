@@ -3,7 +3,7 @@ package oop.lecture;
 public class Cat {
 
 
-//    public sayMeow(){
-//        System.out.println("Meow");
-//    }
+    public void sayMeow(){
+        System.out.println("Meow");
+    }
 }
