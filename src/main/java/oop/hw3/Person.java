@@ -12,9 +12,10 @@ public class Person {
 
     public void printAge(){
         if (isMale){
-            System.out.println(50);
+            System.out.println(age);
         }else {
-            System.out.println(40);
+            System.out.println(age);
         }
     }
+
 }
