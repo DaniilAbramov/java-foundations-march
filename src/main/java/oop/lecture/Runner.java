@@ -51,20 +51,20 @@ public class Runner {
         // Figure
 
         Figure square = new Square();
-       square.setA(6);
+//       square.setA(6);
         square.getArea();
         square.getPerimeter();
 
         Figure rectangle = new Rectangle();
-        rectangle.setA(4);
-        rectangle.setB(5);
+//        rectangle.setA(4);
+//        rectangle.setB(5);
         rectangle.getArea();
         rectangle.getPerimeter();
 
         Figure triangle = new Triangle();
-        triangle.setA(2);
-        triangle.setB(2);
-        triangle.setC(2);
+//        triangle.setA(2);
+//        triangle.setB(2);
+//        triangle.setC(2);
         triangle.getArea();
         triangle.getPerimeter();
 

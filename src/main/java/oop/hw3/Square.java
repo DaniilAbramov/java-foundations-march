@@ -10,11 +10,13 @@ public class Square extends Figure {
 
     @Override
     public void getArea() {
+        a = 5;
         System.out.println("S квадрата = " + a * a);
     }
 
     @Override
     public void getPerimeter() {
-        System.out.println("P квадрата = " + (a*4));
+        a = 5;
+        System.out.println("P квадрата = " + (a * 4));
     }
 }

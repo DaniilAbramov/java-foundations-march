@@ -13,12 +13,18 @@ public class Triangle extends Figure {
 
     @Override
     public void getArea() {
+        a = 2;
+        b = 2;
+        c = 2;
         int p = (a + b + c) / 2;
         System.out.println("S треугольника = " + (Math.sqrt(p * (p - a) * (p - b) * (p - c))));
     }
 
     @Override
     public void getPerimeter() {
+        a = 2;
+        b = 2;
+        c = 2;
         System.out.println("P треугольника = " + (a + b + c));
     }
 }
