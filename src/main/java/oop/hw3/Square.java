@@ -8,6 +8,7 @@ import lombok.Setter;
 public class Square extends Figure {
     private int a;
 
+    public Square(){}
     @Override
     public void getArea() {
         a = 5;

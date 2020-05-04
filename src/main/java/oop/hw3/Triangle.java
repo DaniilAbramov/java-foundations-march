@@ -11,6 +11,7 @@ public class Triangle extends Figure {
     private int c;
     private int p;
 
+    public Triangle(){}
     @Override
     public void getArea() {
         a = 2;

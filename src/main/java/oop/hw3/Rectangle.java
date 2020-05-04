@@ -9,6 +9,7 @@ public class Rectangle extends Figure {
     private int a;
     private int b;
 
+    public Rectangle (){}
     @Override
     public void getArea() {
         a = 5;
