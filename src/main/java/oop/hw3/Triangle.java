@@ -1,8 +1,9 @@
 package oop.hw3;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-
+@AllArgsConstructor
 @Getter
 @Setter
 public class Triangle extends Figure {
@@ -11,7 +12,6 @@ public class Triangle extends Figure {
     private int c;
     private int p;
 
-    public Triangle(){}
     @Override
     public void getArea() {
         a = 2;

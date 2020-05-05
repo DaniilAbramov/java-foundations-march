@@ -1,14 +1,14 @@
 package oop.hw3;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-
+@AllArgsConstructor
 @Setter
 @Getter
 public class Square extends Figure {
     private int a;
 
-    public Square(){}
     @Override
     public void getArea() {
         a = 5;

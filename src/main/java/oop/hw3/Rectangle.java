@@ -1,15 +1,15 @@
 package oop.hw3;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-
+@AllArgsConstructor
 @Setter
 @Getter
 public class Rectangle extends Figure {
     private int a;
     private int b;
 
-    public Rectangle (){}
     @Override
     public void getArea() {
         a = 5;
