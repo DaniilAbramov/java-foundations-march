@@ -10,12 +10,15 @@ public class Person {
     private String name;
     private int age;
 
-    public void printAge(){
-        if (isMale){
+    public void printAge() {
+        if (isMale) {
             System.out.println(age);
-        }else {
+        } else {
             System.out.println(age);
         }
     }
 
+    public String toString() {
+        return isMale + " " + name + " " + age;
+    }
 }

@@ -3,6 +3,7 @@ package oop.hw3;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+
 @AllArgsConstructor
 @Getter
 @Setter
@@ -12,20 +13,18 @@ public class Triangle extends Figure {
     private int c;
     private int p;
 
+    public String toString() {
+        return a + " " + b + " " + c + " " + p;
+    }
+
     @Override
     public void getArea() {
-        a = 2;
-        b = 2;
-        c = 2;
         int p = (a + b + c) / 2;
         System.out.println("S треугольника = " + (Math.sqrt(p * (p - a) * (p - b) * (p - c))));
     }
 
     @Override
     public void getPerimeter() {
-        a = 2;
-        b = 2;
-        c = 2;
         System.out.println("P треугольника = " + (a + b + c));
     }
 }

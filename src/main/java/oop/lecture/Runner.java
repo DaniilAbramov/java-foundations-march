@@ -40,6 +40,7 @@ public class Runner {
         Person galya = new Woman();
         galya.printAge();
         galya.setName("Galya");
+        galya.setAge(29);
         System.out.println(galya.isMale());
 
 // 3. Создать массив типа Person, добавить туда всех Man и Woman
@@ -50,17 +51,23 @@ public class Runner {
         }
         // Figure
 
-        Figure square = new Square();
+        Figure square = new Square(4);
         square.getArea();
         square.getPerimeter();
 
-        Figure rectangle = new Rectangle();
+        Figure rectangle = new Rectangle(2,4);
         rectangle.getArea();
         rectangle.getPerimeter();
 
-        Figure triangle = new Triangle();
+        Figure triangle = new Triangle(2,2,2,0);
         triangle.getArea();
         triangle.getPerimeter();
-        
+
+        System.out.println("galya.toString() = " + galya.toString());
+        System.out.println("oleg.toString() = " + oleg.toString());
+
+        System.out.println("square.toString() = " + square.toString());
+        System.out.println("rectangle.toString() = " + rectangle.toString());
+        System.out.println("triangle.toString() = " + triangle.toString());
     }
 }
