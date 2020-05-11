@@ -10,15 +10,15 @@ public class Vodka {
     private boolean littleDrink;
     private String vodka;
 
-    void drinkTooMuch() {
+    public void drinkTooMuch() {
         System.out.println("Too much drink");
     }
 
-    void drinkTooMuch(String vodka) {
+    public void drinkTooMuch(String vodka) {
         System.out.println("Too much drink" + vodka);
     }
 
-    void drinkTooMuch(boolean drink) {
+    public void drinkTooMuch(boolean drink) {
         System.out.println("Too much drink" + drink);
     }
 

@@ -19,6 +19,7 @@ public class Cat implements Walkable, Swimmable, Runnable, Flyable {
 
     @Override
     public void maxRunDistance() {
+        System.out.println("Максимум пробегу 20 км");
     }
 
     @Override

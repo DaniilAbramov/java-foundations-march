@@ -17,9 +17,7 @@ public class Man implements Walkable, Swimmable, Runnable, Flyable {
     }
 
     @Override
-    public void fly() {
-        System.out.println("Я не умею летать");
-    }
+    public void fly() {}
 
     @Override
     public void sing() {
