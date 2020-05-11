@@ -1,15 +1,6 @@
 package interfaces;
 
-public class Cat implements Walkable, Swimmable, Runnable, Flyable {
-    @Override
-    public void fly() {
-        System.out.println("Я не умею летать");
-    }
-
-    @Override
-    public void sing() {
-        System.out.println("мау мааау мааааау");
-    }
+public class Cat implements Walkable, Swimmable, Runnable {
 
     @Override
     public void run() {

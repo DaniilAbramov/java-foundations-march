@@ -1,20 +1,10 @@
 package interfaces;
 
-public class Dog implements Walkable, Swimmable, Runnable, Flyable {
+public class Dog implements Walkable, Swimmable, Runnable {
 
     @Override
     public void walk() {
         System.out.println("Я гуляю на 4 лапах");
-    }
-
-    @Override
-    public void fly() {
-        System.out.println("Я не умею летать");
-    }
-
-    @Override
-    public void sing() {
-        System.out.println("аууу ауууууу аууууууу");
     }
 
     @Override

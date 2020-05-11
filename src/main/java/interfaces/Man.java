@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Setter
 @Getter
-public class Man implements Walkable, Swimmable, Runnable, Flyable {
+public class Man implements Walkable, Swimmable, Runnable {
     private String sing;
     private int maxRunDistance;
     private double maxSwimSpeed;
@@ -15,13 +15,6 @@ public class Man implements Walkable, Swimmable, Runnable, Flyable {
     public void walk() {
         System.out.println("Я гуляю на двух ногах");
     }
-
-    @Override
-    public void fly() {}
-
-    @Override
-    public void sing() {
-        System.out.println("Lalala");    }
 
     @Override
     public void run() {

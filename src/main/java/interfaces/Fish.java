@@ -1,15 +1,6 @@
 package interfaces;
 
-public class Fish implements Walkable, Swimmable, Runnable, Flyable {
-    @Override
-    public void fly() {
-        System.out.println("Я не летаю");
-    }
-
-    @Override
-    public void sing() {
-        System.out.println("Под водой не споешь");
-    }
+public class Fish implements Walkable, Swimmable, Runnable {
 
     @Override
     public void run() {
