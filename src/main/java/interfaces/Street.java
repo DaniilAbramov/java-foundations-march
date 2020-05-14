@@ -18,8 +18,6 @@ public class Street {
         oleg.walk();
         oleg.run();
         oleg.maxRunDistance();
-        oleg.fly();
-        oleg.sing();
         oleg.swim();
         oleg.maxSwimSpeed();
 
@@ -27,8 +25,6 @@ public class Street {
         System.out.println("Я кошка по имени Мурка");
         murka.run();
         murka.maxRunDistance();
-        murka.fly();
-        murka.sing();
         murka.swim();
         murka.maxSwimSpeed();
         murka.walk();
@@ -37,8 +33,6 @@ public class Street {
         System.out.println("Я пес по имени Боббик");
         bobbik.run();
         bobbik.maxRunDistance();
-        bobbik.fly();
-        bobbik.sing();
         bobbik.swim();
         bobbik.maxSwimSpeed();
         bobbik.walk();
@@ -47,8 +41,6 @@ public class Street {
         System.out.println("Я золотая рыбка");
         goldFish.run();
         goldFish.maxRunDistance();
-        goldFish.fly();
-        goldFish.sing();
         goldFish.swim();
         goldFish.maxSwimSpeed();
         goldFish.walk();
