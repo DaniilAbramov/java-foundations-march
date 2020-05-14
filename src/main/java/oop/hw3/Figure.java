@@ -8,9 +8,9 @@ import lombok.Setter;
 @Getter
 public class Figure {
 
-    public void getArea(){
+    public void getArea() {
     }
-    public void getPerimeter(){
 
+    public void getPerimeter() {
     }
 }
