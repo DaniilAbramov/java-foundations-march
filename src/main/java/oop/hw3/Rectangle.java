@@ -24,4 +24,14 @@ public class Rectangle extends Figure {
     public void getPerimeter() {
         System.out.println("P прямоугольника = " + (2 * (a + b)));
     }
+
+    public double printArea() {
+        System.out.print("Площадь прямоугольника= ");
+        return a * b;
+    }
+
+    public double printPerimeter() {
+        System.out.print("Периметр прямоугольника= ");
+        return (2 * (a + b));
+    }
 }

@@ -59,15 +59,29 @@ public class Runner {
         rectangle.getArea();
         rectangle.getPerimeter();
 
-        Figure triangle = new Triangle(2,2,2,0);
+        Figure triangle = new Triangle(3,3,2,0);
+        Figure secondTriangle = new Triangle(3,3,2,0);
         triangle.getArea();
         triangle.getPerimeter();
+        System.out.println(triangle.printArea());
+        System.out.println(triangle.printPerimeter());
 
-        System.out.println("galya.toString() = " + galya.toString());
-        System.out.println("oleg.toString() = " + oleg.toString());
+//
+//        System.out.println("galya.toString() = " + galya.toString());
+//        System.out.println("oleg.toString() = " + oleg.toString());
+//
+//        System.out.println("square.toString() = " + square.toString());
+//        System.out.println("rectangle.toString() = " + rectangle.toString());
+//        System.out.println("triangle.toString() = " + triangle.toString());
+//
+//        System.out.println(rectangle.printPerimeter());
+//        System.out.println(triangle.printArea());
+//
+//        Figure circle = new Circle(3);
+//        circle.getArea();
+//        circle.getPerimeter();
+//        System.out.println("circle.toString() = " + circle.toString());
+//
 
-        System.out.println("square.toString() = " + square.toString());
-        System.out.println("rectangle.toString() = " + rectangle.toString());
-        System.out.println("triangle.toString() = " + triangle.toString());
     }
 }

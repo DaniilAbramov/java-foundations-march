@@ -1,6 +1,6 @@
 package interfaces;
 
-public class Man implements Walkable {
+public class Man implements Walkable,Talkable,Eatable {
 
     @Override
     public void walk() {
