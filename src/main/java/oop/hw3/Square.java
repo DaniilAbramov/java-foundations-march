@@ -25,11 +25,11 @@ public class Square extends Figure {
     }
 
     public double printArea() {
-        System.out.print("Площадь квадрата= ");
+        System.out.print("Площадь квадрата ");
         return a * a;
     }
     public double printPerimeter(){
-        System.out.print("Периметер квадрата= ");
+        System.out.print("Периметер квадрата ");
         return a * 4;
     }
 }

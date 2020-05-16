@@ -26,12 +26,12 @@ public class Rectangle extends Figure {
     }
 
     public double printArea() {
-        System.out.print("Площадь прямоугольника= ");
+        System.out.print("Площадь прямоугольника ");
         return a * b;
     }
 
     public double printPerimeter() {
-        System.out.print("Периметр прямоугольника= ");
+        System.out.print("Периметр прямоугольника ");
         return (2 * (a + b));
     }
 }

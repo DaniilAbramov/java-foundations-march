@@ -9,12 +9,11 @@ public class Street {
         dima.walk();
         tuzik.walk();
 
-        Walkable[] walkables = new Walkable[2];
-        walkables[0] = dima;
-        walkables[1] = tuzik;
+//        Walkable[] walkables = new Walkable[2];
+//        walkables[0] = dima;
+//        walkables[1] = tuzik;
         Plant paporotnik = new Plant();
         paporotnik.eat();
-        paporotnik.talk();
         Cow moo = new Cow();
         moo.eat();
         moo.talk();
