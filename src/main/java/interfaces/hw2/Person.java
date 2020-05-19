@@ -1,36 +1,25 @@
 package interfaces.hw2;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-
-import java.util.Comparator;
 
 @AllArgsConstructor
-@Getter
-@Setter
-public class Person implements Comparable<Person>,Cloneable {
+public class Person implements Comparable<Person>, Cloneable {
     private String name;
     private String surname;
     private int age;
 
-
     @Override
     public int compareTo(Person oPerson) {
-        if (surname.compareTo(oPerson.surname) < 0) {
+        if ((surname.compareTo(oPerson.surname) < 0) || (name.compareTo(oPerson.name) < 0)) {
             return 1;
-        } else if (surname.compareTo(oPerson.surname) > 0) {
-            return -1;
-        } else if (name.compareTo(oPerson.name) < 0) {
-            return 1;
-        } else if (name.compareTo(oPerson.name) > 0) {
+        } else if ((surname.compareTo(oPerson.surname) > 0) || (name.compareTo(oPerson.name) > 0)) {
             return -1;
         } else if (age < oPerson.age) {
             return 1;
-        } else if (age>oPerson.age){
+        } else if (age > oPerson.age) {
             return -1;
         }
-            return 0;
+        return 0;
     }
 
     @Override
@@ -47,8 +36,4 @@ public class Person implements Comparable<Person>,Cloneable {
         return super.clone();
     }
 
-//    Comparator<Person> = new Comparator<Person>(){}
-    public int compare (Person o1,Person o2){
-        return o1.surname.compareTo(o2.surname);
-    }
 }

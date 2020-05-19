@@ -20,6 +20,7 @@ public class Gym {
         Person cloneOleg = (Person) oleg.clone();
         System.out.println(cloneOleg);
 
-        System.out.println(oleg.compare(dasha, oleg));
+        System.out.println(oleg.compareTo(dasha));
+        System.out.println(dasha.compareTo(oleg));
     }
 }
