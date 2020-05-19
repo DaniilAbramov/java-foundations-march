@@ -1,4 +1,4 @@
-package interfaces;
+package interfaces.lecture;
 
 public class Street {
     public static void main(String[] args) {

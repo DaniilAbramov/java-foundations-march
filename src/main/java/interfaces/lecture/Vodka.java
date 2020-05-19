@@ -1,4 +1,4 @@
-package interfaces;
+package interfaces.lecture;
 
 import lombok.Getter;
 import lombok.Setter;

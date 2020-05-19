@@ -1,4 +1,4 @@
-package interfaces;
+package interfaces.lecture;
 
 public class Cat implements Walkable, Swimmable, Runnable {
 

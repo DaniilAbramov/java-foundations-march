@@ -1,4 +1,4 @@
-package interfaces;
+package interfaces.lecture;
 
 public interface Swimmable {
     void swim();
