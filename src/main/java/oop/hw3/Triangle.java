@@ -27,4 +27,21 @@ public class Triangle extends Figure {
     public void getPerimeter() {
         System.out.println("P треугольника = " + (a + b + c));
     }
+
+    public double printArea() {
+        System.out.print("Площадь треугольника ");
+        double p = (a + b + c) / 2.0;
+        return (Math.sqrt(p * (p - a) * (p - b) * (p - c)));
+    }
+
+    public double printPerimeter() {
+        System.out.print("Периметр треугольника ");
+        return a + b + c;
+    }
+//    public boolean equals(){
+//
+//    }
+
+
+
 }

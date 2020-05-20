@@ -23,4 +23,13 @@ public class Square extends Figure {
     public void getPerimeter() {
         System.out.println("P квадрата = " + (a * 4));
     }
+
+    public double printArea() {
+        System.out.print("Площадь квадрата ");
+        return a * a;
+    }
+    public double printPerimeter(){
+        System.out.print("Периметер квадрата ");
+        return a * 4;
+    }
 }
