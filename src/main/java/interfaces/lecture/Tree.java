@@ -1,4 +1,4 @@
-package interfaces;
+package interfaces.lecture;
 
 public abstract class Tree {
         private boolean smellGood = true;

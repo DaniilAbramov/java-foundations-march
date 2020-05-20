@@ -1,4 +1,4 @@
-package interfaces;
+package interfaces.lecture;
 
 public class Birch extends Tree {
     @Override

@@ -1,4 +1,4 @@
-package interfaces;
+package interfaces.lecture;
 
 public class Dog implements Walkable, Swimmable, Runnable {
 

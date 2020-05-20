@@ -1,4 +1,4 @@
-package interfaces;
+package interfaces.lecture;
 
 public class Bird implements Walkable, Swimmable, Runnable, Flyable {
     @Override

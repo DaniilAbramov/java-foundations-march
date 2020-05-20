@@ -1,4 +1,4 @@
-package interfaces;
+package interfaces.lecture;
 
 public class Fish implements Walkable, Swimmable, Runnable {
 
