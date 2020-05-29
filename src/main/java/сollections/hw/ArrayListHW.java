@@ -76,9 +76,8 @@ public class ArrayListHW {
         System.out.print("Кол-во 0 в листе = " + count);
 
         //7
-        System.out.println("Задача 7");
-        System.out.println("\nВыводим все элементы кроме первых 3-х = " + hwList.subList(3, hwList.size()));
-
+        System.out.println("\nЗадача 7");
+        System.out.println("Выводим все элементы кроме первых 3-х = " + hwList.subList(3, hwList.size()));
         hwList.set(20, "0");
 
         //7.1
@@ -102,7 +101,7 @@ public class ArrayListHW {
         hwList.add(20, "символов");
 
         //8
-        System.out.println("Задача 8");
+        System.out.println("\nЗадача 8");
         printList1(hwList);
         System.out.print("Первый элемент количество символов которого делится на 3 :");
         for (String s : hwList) {
