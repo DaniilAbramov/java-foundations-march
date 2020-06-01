@@ -60,6 +60,7 @@ public class MyArrayList {
     public void clear() {
         for (int i = 0; i < array.length; i++) {
             array[i] = null;
+            size = 0;
         }
     }
 
@@ -76,40 +77,21 @@ public class MyArrayList {
     }
 
     public Object set(int index, Object element) {
-        for (int i = 0; i < array.length; i++) {
-            if (i == index) {
-                array[i] = element;
-            }
+        if (index <= size) {
+            array[index] = element;
             return true;
+        } else {
+            return false;
         }
-        return null;
     }
 
 
     public void add(int index, Object element) {
-//        if (size >= array.length) {
-//            Object[] resArray = new Object[3 * 2 * size + 1];
-//            System.arraycopy(array, 0, resArray, 0, size);
-//            array = resArray;
-//            for (int i = 0; i < index; i++) {
-//                resArray[i] = array[i];
-//            }
-//            resArray[index] = element;
-//            for (int i = index; i < array.length; i++) {
-//                resArray[i + 1] = array[i];
-//            }
-//        }
-//        array[size++] = element;
-
-//        if (size >= array.length) {
-
         Object[] resArray = new Object[3 * 2 * size + 1];
         System.arraycopy(array, 0, resArray, 0, size);
         array = resArray;
-        System.arraycopy(array, index, resArray, index+1, size);
+        System.arraycopy(array, index, resArray, index + 1, size);
         resArray[index] = element;
-//        }
-
 
     }
 

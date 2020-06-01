@@ -20,12 +20,12 @@ public class MyArrayListPractice {
         System.out.println(myList.size());
 
         System.out.println(myList.get(10));
-//        System.out.println(myList.set(0, "22"));
-//        System.out.println(myList);
+        System.out.println(myList.set(1, "22"));
+        System.out.println(myList);
 
-        System.out.println(myList);
-        myList.add(4,"233");
-        System.out.println(myList);
+//        System.out.println(myList);
+//        myList.add(4,"233");
+//        System.out.println(myList);
 
 //        System.out.println(myList);
 //        System.out.println(myList.remove(4));
