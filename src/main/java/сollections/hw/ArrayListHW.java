@@ -58,15 +58,15 @@ public class ArrayListHW {
         System.out.println();
 
         //6
+
         System.out.println("Задача 6");
         printList1(hwList);
         System.out.print("Элементы с индексом делящиеся на 3 - ");
-        for (int i = 0; i < hwList.size(); i++) {
-            if (i % 3 == 0) {
+        for (int i = 0; i < hwList.size(); i+=3) {
                 System.out.print(hwList.get(i) + " ");
-            }
         }
         System.out.println();
+        System.out.println("Задача 6.1");
         int count = 0;
         for (String s : hwList) {
             if (s.equals("0")) {
