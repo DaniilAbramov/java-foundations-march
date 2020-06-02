@@ -57,11 +57,12 @@ public class MyArrayList {
     }
 
 
-    public void clear() {
+    public boolean clear() {
         for (int i = 0; i < array.length; i++) {
             array[i] = null;
             size = 0;
         }
+        return true;
     }
 
     public Object get(int index) {
