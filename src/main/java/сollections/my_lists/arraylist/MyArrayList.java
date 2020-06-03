@@ -1,7 +1,6 @@
-package сollections.my_lists;
+package сollections.my_lists.arraylist;
 
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MyArrayList {

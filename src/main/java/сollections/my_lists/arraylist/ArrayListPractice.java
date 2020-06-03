@@ -1,4 +1,4 @@
-package сollections;
+package сollections.my_lists.arraylist;
 
 import java.util.ArrayList;
 import java.util.List;

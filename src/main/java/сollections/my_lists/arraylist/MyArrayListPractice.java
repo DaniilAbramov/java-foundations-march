@@ -1,4 +1,6 @@
-package сollections.my_lists;
+package сollections.my_lists.arraylist;
+
+import сollections.my_lists.arraylist.MyArrayList;
 
 public class MyArrayListPractice {
     public static void main(String[] args) {
