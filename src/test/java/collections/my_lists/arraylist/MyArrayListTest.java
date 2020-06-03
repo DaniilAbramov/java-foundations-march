@@ -120,7 +120,8 @@ public class MyArrayListTest {
         list.add("element1");
         list.add("element2");
         list.add("element3");
-        assertEquals(true, list.set(1, "niceTry"));
+        list.set(1, "niceTry");
+        assertEquals("niceTry", list.get(1));
         System.out.println(list.get(1));
     }
 }
