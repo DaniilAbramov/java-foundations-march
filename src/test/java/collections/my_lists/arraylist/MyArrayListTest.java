@@ -18,17 +18,18 @@ public class MyArrayListTest {
         assertEquals("element", String.valueOf(list.get(0)));
     }
 
-//    @Test
-//    @DisplayName("корректный метод add2")
-//    public void shouldHaveCorrectMethodAdd2() {
-//        list.add("element1");
-//        list.add("element2");
-//        list.add("element3");
-//        assertEquals(, list.add(1, "322"));
-//    }
+    @Test
+    @DisplayName("корректный метод addIndexAndElement")
+    public void shouldHaveCorrectMethodAddIndexAndElement() {
+        list.add("element1");
+        list.add("element2");
+        list.add("element3");
+        list.add(1, "322");
+        assertEquals("322",list.get(1) );
+    }
 
     @Test
-    @DisplayName("кореектный метод size")
+    @DisplayName("корректный метод size")
     public void shouldHaveCorrectSize() {
         list.add("element");
         assertEquals(1, list.size());
@@ -43,7 +44,7 @@ public class MyArrayListTest {
     }
 
     @Test
-    @DisplayName("кореектный метод indexOf2")
+    @DisplayName("корректный метод indexOf2")
     public void shouldHaveCorrectIndexOf2() {
         list.add("element1");
         list.add("element2");
@@ -51,7 +52,7 @@ public class MyArrayListTest {
     }
 
     @Test
-    @DisplayName("кореектный метод Get")
+    @DisplayName("корректный метод Get")
     public void shouldHaveCorrectMethodGet() {
         list.add("element1");
         list.add("element2");
@@ -60,7 +61,7 @@ public class MyArrayListTest {
     }
 
     @Test
-    @DisplayName("кореектный метод Clear")
+    @DisplayName("корректный метод Clear")
     public void shouldHaveCorrectMethodClear() {
         list.add("element1");
         list.add("element2");
@@ -72,7 +73,7 @@ public class MyArrayListTest {
     }
 
     @Test
-    @DisplayName("кореектный метод Contains")
+    @DisplayName("корректный метод Contains")
     public void shouldHaveCorrectMethodContains() {
         list.add("element1");
         list.add("element2");
@@ -80,7 +81,7 @@ public class MyArrayListTest {
     }
 
     @Test
-    @DisplayName("кореектный метод isEmpty")
+    @DisplayName("корректный метод isEmpty")
     public void shouldHaveCorrectMethodIsEmpty() {
         list.add("element1");
         list.add("element2");
@@ -89,13 +90,13 @@ public class MyArrayListTest {
     }
 
     @Test
-    @DisplayName("кореектный метод isEmpty2")
+    @DisplayName("корректный метод isEmpty2")
     public void shouldHaveCorrectMethodIsEmpty2() {
         assertEquals(true, list.isEmpty());
     }
 
     @Test
-    @DisplayName("кореектный метод remove")
+    @DisplayName("корректный метод remove")
     public void shouldHaveCorrectMethodRemove() {
         list.add("element1");
         list.add("element2");
@@ -105,7 +106,7 @@ public class MyArrayListTest {
     }
 
     @Test
-    @DisplayName("кореектный метод remove2\"\uD83D\uDE31\"")
+    @DisplayName("корректный метод remove2\"\uD83D\uDE31\"")
     public void shouldHaveCorrectMethodRemove2() {
         list.add("element1");
         list.add("element2");
@@ -114,7 +115,7 @@ public class MyArrayListTest {
     }
 
     @Test
-    @DisplayName("кореектный метод Set")
+    @DisplayName("корректный метод Set")
     public void shouldHaveCorrectMethodSet() {
         list.add("element1");
         list.add("element2");
