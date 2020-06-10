@@ -2,7 +2,7 @@ package сollections.my_lists.linkedlist;
 
 public class MyLinkedList {
     private Node startNode;
-    private int size = 1;
+    private int size;
 
     public MyLinkedList(Object obj) {
         startNode = new Node(obj, null);
@@ -116,10 +116,7 @@ public class MyLinkedList {
     public Object set(int index, Object element) {
         Node curNode = startNode.getNext();
         Node prevNode = startNode;
-        if (index < 0 || index > size) {
-            System.err.println("Введите корректный индекс!!");
-            throw new IndexOutOfBoundsException();
-        }
+        checkIndex(index);
         if (index == 0) {
             prevNode.setElement(element);
         } else if (index <= size) {
@@ -136,10 +133,7 @@ public class MyLinkedList {
     public void add(int index, Object element) {
         Node curNode = startNode.getNext();
         Node prevNode = startNode;
-        if (index < 0 || index > size) {
-            System.err.println("Введите корректный индекс!!");
-            throw new IndexOutOfBoundsException();
-        }
+        checkIndex(index);
         Node newNode = new Node(element, null);
         if (index == 0) {
             newNode.setNext(prevNode);
@@ -160,9 +154,9 @@ public class MyLinkedList {
         Node node = startNode;
         for (int i = 0; i < size; i++) {
             if (o.equals(get(i))) {
-                node = node.getNext();
                 return i;
             }
+            node = node.getNext();
         }
         return -1;
     }
@@ -201,10 +195,10 @@ public class MyLinkedList {
     public int lastIndexOf(Object o) {
         Node node = startNode;
         for (int i = size - 1; i >= 0; i--) {
-            node = node.getNext();
             if (o.equals(get(i))) {
                 return i;
             }
+            node = node.getNext();
         }
         return 0;
     }
@@ -220,15 +214,6 @@ public class MyLinkedList {
             }
         }
         sb.append('}');
-
         return sb.toString();
     }
-
-//    @Override
-//    public String toString() {
-//        return "MyLinkedList{" +
-//                "startNode=" + startNode +
-//                ", size=" + size +
-//                '}';
-//    }
 }
