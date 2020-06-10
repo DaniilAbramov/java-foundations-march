@@ -1,6 +1,8 @@
 package lectureWithBar;
 
 
+import java.util.Arrays;
+
 public class Bar extends ComparatorPerson{
     public static void main(String[] args) {
 
@@ -37,8 +39,9 @@ public class Bar extends ComparatorPerson{
 
         Person[] tusa = new Person[]{tema, dima, andrey, nikita, sanya, luba, luba1, vitya, kirill, olga, dasha, sveta, ira, natasha};
 
-        System.out.println(luba.compareTo(sveta, sanya));
-
+        ComparatorPerson comparatorPerson = new ComparatorPerson();
+        Arrays.sort(tusa,comparatorPerson);
+        System.out.println(Arrays.toString(tusa));
 //        chekAge(tusa);
 //        guestList(tusa);
 

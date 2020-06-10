@@ -6,8 +6,8 @@ import lombok.Data;
 @AllArgsConstructor
 @Data
 public class Woman extends Person {
-    private String name;
-    private String surname;
+    private final String name;
+    private final String surname;
     private int age;
     public String contact;
     @Override
