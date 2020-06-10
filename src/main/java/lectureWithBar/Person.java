@@ -3,16 +3,16 @@ package lectureWithBar;
 import lombok.Data;
 
 @Data
-public class Person implements Comparable {
+public class Person extends ComparatorPerson {
     private String name;
     private String surname;
     private int age;
-    private int contact;
+    private String contact;
 
 
-    @Override
-    public int compareTo(Object o) {
-
-        return 0;
-    }
+//    @Override
+//    public int compareTo(Object o) {
+//
+//        return 0;
+//    }
 }

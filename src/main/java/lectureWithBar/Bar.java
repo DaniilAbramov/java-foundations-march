@@ -1,23 +1,38 @@
 package lectureWithBar;
 
 
-public class Bar {
+public class Bar extends ComparatorPerson{
     public static void main(String[] args) {
 
-        Friends tema = new Friends("Tema", "Ivanov", 22, 3);
-        Friends dima = new Friends("Dima", "Kozlov", 26, 1);
-        Friends andrey = new Friends("Andrey", "Petuhov", 18, 2);
-        Friends nikita = new Friends("Nikita", "Kutherov", 30, 3);
-        Friends sanya = new Friends("Sanya", "Ivanov", 33, 3);
-        Friends vitya = new Friends("Vitya", "Peskov", 21, 1);
-        Friends kirill = new Friends("Kirill", "Isaev", 26, 2);
-        Woman olga = new Woman("Olga", "Ivanova", 20, 1);
-        Woman dasha = new Woman("Dasha", "Petrova", 17, 1);
-        Woman luba = new Woman("Luba", "Lubova", 40, 2);
-        Woman ira = new Woman("Ira", "Irinova", 21, 3);
-        Woman sveta = new Woman("Sveta", "Svetlanova", 23, 2);
-        Woman luba1 = new Woman("Luba", "Orlova", 22, 1);
-        Woman natasha = new Woman("Natasha", "Koshkina", 17, 3);
+//        Friends tema = new Friends("Tema", "Ivanov", 22);
+//        Friends dima = new Friends("Dima", "Kozlov", 26);
+//        Friends andrey = new Friends("Andrey", "Petuhov", 18);
+//        Friends nikita = new Friends("Nikita", "Kutherov", 30);
+//        Friends sanya = new Friends("Sanya", "Ivanov", 33);
+//        Friends vitya = new Friends("Vitya", "Peskov", 21);
+//        Friends kirill = new Friends("Kirill", "Isaev", 26);
+//        Woman olga = new Woman("Olga", "Ivanova", 20);
+//        Woman dasha = new Woman("Dasha", "Petrova", 17);
+//        Woman luba = new Woman("Luba", "Lubova", 40);
+//        Woman ira = new Woman("Ira", "Irinova", 21);
+//        Woman sveta = new Woman("Sveta", "Svetlanova", 23);
+//        Woman luba1 = new Woman("Luba", "Orlova", 22);
+//        Woman natasha = new Woman("Natasha", "Koshkina", 17);
+
+        Friends tema = new Friends("Tema", "Ivanov", 22, "a");
+        Friends dima = new Friends("Dima", "Kozlov", 26, "1");
+        Friends andrey = new Friends("Andrey", "Petuhov", 18, "2");
+        Friends nikita = new Friends("Nikita", "Kutherov", 30, "3");
+        Friends sanya = new Friends("Sanya", "Ivanov", 33, "3");
+        Friends vitya = new Friends("Vitya", "Peskov", 21, "1");
+        Friends kirill = new Friends("Kirill", "Isaev", 26, "2");
+        Woman olga = new Woman("Olga", "Ivanova", 20, "1");
+        Woman dasha = new Woman("Dasha", "Petrova", 17, "z");
+        Woman luba = new Woman("Luba", "Lubova", 40, "2");
+        Woman ira = new Woman("Ira", "Irinova", 21, "3");
+        Woman sveta = new Woman("Sveta", "Svetlanova", 23, "2");
+        Woman luba1 = new Woman("Luba", "Orlova", 22, "1");
+        Woman natasha = new Woman("Natasha", "Koshkina", 17, "3");
 
         System.out.println(tema.toString());
         System.out.println(dima.toString());
@@ -37,8 +52,10 @@ public class Bar {
 
         Person[] tusa = new Person[]{tema, dima, andrey, nikita, sanya, luba, luba1, vitya, kirill, olga, dasha, sveta, ira, natasha};
 
-        chekAge(tusa);
-        guestList(tusa);
+        System.out.println(luba.compareTo(sveta, sanya));
+
+//        chekAge(tusa);
+//        guestList(tusa);
 
     }
 
@@ -53,9 +70,7 @@ public class Bar {
     private static void guestList(Person[] tusa) {
         System.out.print("Итоговый список гостей: ");
         for (Person p : tusa) {
-            if (p.getName().equals("Luba")) {
-
-            } else {
+            if (!p.getName().equals("Luba")) {
                 System.out.println(p.getName() + " ");
             }
         }

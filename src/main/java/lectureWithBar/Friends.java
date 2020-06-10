@@ -6,10 +6,10 @@ import lombok.Data;
 @AllArgsConstructor
 @Data
 public class Friends extends Person {
-    private String name;
-    private String surname;
+    private final String name;
+    private final String surname;
     private int age;
-    private int contact;
+    public String contact;
     @Override
     public String toString() {
         return name + ": Погнали мужики!!!";

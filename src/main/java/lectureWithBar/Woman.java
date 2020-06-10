@@ -9,8 +9,7 @@ public class Woman extends Person {
     private String name;
     private String surname;
     private int age;
-    private int contact;
-
+    public String contact;
     @Override
     public String toString() {
         return name + ": Подожди мне надо накраситься!";
