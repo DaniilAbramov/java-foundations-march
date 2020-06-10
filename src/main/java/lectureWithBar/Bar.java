@@ -4,21 +4,6 @@ package lectureWithBar;
 public class Bar extends ComparatorPerson{
     public static void main(String[] args) {
 
-//        Friends tema = new Friends("Tema", "Ivanov", 22);
-//        Friends dima = new Friends("Dima", "Kozlov", 26);
-//        Friends andrey = new Friends("Andrey", "Petuhov", 18);
-//        Friends nikita = new Friends("Nikita", "Kutherov", 30);
-//        Friends sanya = new Friends("Sanya", "Ivanov", 33);
-//        Friends vitya = new Friends("Vitya", "Peskov", 21);
-//        Friends kirill = new Friends("Kirill", "Isaev", 26);
-//        Woman olga = new Woman("Olga", "Ivanova", 20);
-//        Woman dasha = new Woman("Dasha", "Petrova", 17);
-//        Woman luba = new Woman("Luba", "Lubova", 40);
-//        Woman ira = new Woman("Ira", "Irinova", 21);
-//        Woman sveta = new Woman("Sveta", "Svetlanova", 23);
-//        Woman luba1 = new Woman("Luba", "Orlova", 22);
-//        Woman natasha = new Woman("Natasha", "Koshkina", 17);
-
         Friends tema = new Friends("Tema", "Ivanov", 22, "a");
         Friends dima = new Friends("Dima", "Kozlov", 26, "1");
         Friends andrey = new Friends("Andrey", "Petuhov", 18, "2");
