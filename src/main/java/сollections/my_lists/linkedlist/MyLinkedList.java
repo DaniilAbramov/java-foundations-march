@@ -1,12 +1,8 @@
 package сollections.my_lists.linkedlist;
 
-import сollections.my_lists.arraylist.MyArrayList;
-
-import java.util.Arrays;
-
 public class MyLinkedList {
     private Node startNode;
-    private int size = 1;
+    private int size;
 
     public MyLinkedList(Object obj) {
         startNode = new Node(obj, null);
@@ -27,7 +23,13 @@ public class MyLinkedList {
 
 
     public boolean contains(Object o) {
-
+        Node node = startNode;
+        for (int i = 0; i < size; i++) {
+            if (o.equals(get(i))) {
+                return true;
+            }
+            node = node.getNext();
+        }
         return false;
     }
 
@@ -59,7 +61,7 @@ public class MyLinkedList {
     }
 
     public boolean remove(Object o) {
-        if(size == 0 || o == null){
+        if (size == 0 || o == null) {
             return false;
         }
 
@@ -69,7 +71,6 @@ public class MyLinkedList {
             } else {
                 startNode = null;
             }
-            startNode = null;
             size--;
             return true;
         }
@@ -93,12 +94,13 @@ public class MyLinkedList {
 
 
     public void clear() {
-
+        startNode = null;
+        size = 0;
     }
 
     public Object get(int index) {
         Node curNode = startNode;
-        for (int i = 0; i < index - 1; i++) {
+        for (int i = 0; i < index; i++) {
             curNode = curNode.getNext();
         }
         return curNode.getElement();
@@ -112,35 +114,93 @@ public class MyLinkedList {
     }
 
     public Object set(int index, Object element) {
-
+        Node curNode = startNode.getNext();
+        Node prevNode = startNode;
+        checkIndex(index);
+        if (index == 0) {
+            prevNode.setElement(element);
+        } else if (index <= size) {
+            for (int i = 1; i < index; i++) {
+                curNode = curNode.getNext();
+                prevNode = prevNode.getNext();
+            }
+            curNode.setElement(element);
+        }
         return false;
-
     }
 
 
     public void add(int index, Object element) {
-
+        Node curNode = startNode.getNext();
+        Node prevNode = startNode;
+        checkIndex(index);
+        Node newNode = new Node(element, null);
+        if (index == 0) {
+            newNode.setNext(prevNode);
+            startNode = newNode;
+//                curNode = curNode.getNext();
+        } else if (index <= size) {
+            for (int i = 1; i < index; i++) {
+                curNode = curNode.getNext();
+                prevNode = prevNode.getNext();
+            }
+            newNode.setNext(curNode);
+            prevNode.setNext(newNode);
+        }
+        size++;
     }
 
     public int indexOf(Object o) {
-
+        Node node = startNode;
+        for (int i = 0; i < size; i++) {
+            if (o.equals(get(i))) {
+                return i;
+            }
+            node = node.getNext();
+        }
         return -1;
     }
 
     public Object remove(int index) {
+        if (index < 0 || index > size) {
+            System.err.println("Введите корректный индекс");
+        }
+        if (index == 0) {
+            if (startNode.getNext() != null) {
+                startNode = startNode.getNext();
+            } else {
+                startNode = null;
+            }
+            size--;
+            return true;
+        }
 
-        return true;
-
+        if (size > 0) {
+            Node prevNode = startNode;
+            Node curNode = startNode.getNext();
+            for (int i = 1; i < size; i++) {
+                if (i == index) {
+                    prevNode.setNext(curNode.getNext());
+                    curNode.setNext(null);
+                    size--;
+                    return true;
+                }
+                prevNode = curNode;
+                curNode = curNode.getNext();
+            }
+        }
+        return false;
     }
 
     public int lastIndexOf(Object o) {
-
+        Node node = startNode;
+        for (int i = size - 1; i >= 0; i--) {
+            if (o.equals(get(i))) {
+                return i;
+            }
+            node = node.getNext();
+        }
         return 0;
-    }
-
-    public MyArrayList subList(int fromIndex, int toIndex) {
-
-        return null;
     }
 
     @Override
@@ -154,7 +214,6 @@ public class MyLinkedList {
             }
         }
         sb.append('}');
-
         return sb.toString();
     }
 }

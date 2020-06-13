@@ -18,14 +18,15 @@ public class MyLinkedListTest {
         assertEquals("element", String.valueOf(list.get(0)));
     }
 
-//    @Test
-//    @DisplayName("корректный метод add2")
-//    public void shouldHaveCorrectMethodAdd2() {
-//        list.add("element1");
-//        list.add("element2");
-//        list.add("element3");
-//        assertEquals(, list.add(1, "322"));
-//    }
+    @Test
+    @DisplayName("корректный метод add2")
+    public void shouldHaveCorrectMethodAdd2() {
+        list.add("element1");
+        list.add("element2");
+        list.add("element3");
+        list.add(1, "test");
+        assertEquals("test", list.get(1));
+    }
 
     @Test
     @DisplayName("кореектный метод size")
@@ -76,7 +77,7 @@ public class MyLinkedListTest {
     public void shouldHaveCorrectMethodContains() {
         list.add("element1");
         list.add("element2");
-        assertEquals(true, list.contains("element1"));
+        assertEquals(true, list.contains("element2"));
     }
 
     @Test
@@ -95,18 +96,18 @@ public class MyLinkedListTest {
     }
 
     @Test
-    @DisplayName("кореектный метод remove")
-    public void shouldHaveCorrectMethodRemove() {
+    @DisplayName("кореектный метод remove(index)")
+    public void shouldHaveCorrectMethodRemoveIndex() {
         list.add("element1");
         list.add("element2");
         list.add("element3");
-        assertEquals(true, list.remove(1));
-
+        assertEquals(true, list.remove(2));
+        System.out.println("list = " + list);
     }
 
     @Test
-    @DisplayName("кореектный метод remove2\"\uD83D\uDE31\"")
-    public void shouldHaveCorrectMethodRemove2() {
+    @DisplayName("кореектный метод remove\"\uD83D\uDE31\"")
+    public void shouldHaveCorrectMethodRemove() {
         list.add("element1");
         list.add("element2");
         list.add("element3");
