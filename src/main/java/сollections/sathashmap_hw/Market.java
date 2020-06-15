@@ -39,12 +39,16 @@ public class Market {
         Buyer dasha = new Buyer("Dasha", 24);
         Buyer olga = new Buyer("Olga", 24);
         Buyer anton = new Buyer("Anton", 24);
+        Buyer danya = new Buyer("Danya", 24);
+        Buyer natasha = new Buyer("Natasha", 25);
 
         Fruit peach = new Fruit("Peach", 0.500);
         Fruit mango = new Fruit("Mango", 1.00);
         Fruit kiwi = new Fruit("Kiwi", 1.00);
         Fruit apricot = new Fruit("Apricot", 0.500);
         Fruit grape = new Fruit("Grape", 2.500);
+        Fruit lemon = new Fruit("Lemon", 2.500);
+        Fruit strawberry = new Fruit("Strawberry", 1.00);
 
         System.out.println(fruitSet.add(peach));
         System.out.println(fruitSet.add(mango));
@@ -63,6 +67,8 @@ public class Market {
         buyerFruitMap.put(dasha, grape);
         buyerFruitMap.put(olga, peach);
         buyerFruitMap.put(anton, mango);
+        buyerFruitMap.put(danya, lemon);
+        buyerFruitMap.put(natasha, strawberry);
 
         print(buyerFruitMap);
         System.out.println("Фрукт по ключу: ");
