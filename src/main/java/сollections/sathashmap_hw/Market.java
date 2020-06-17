@@ -117,8 +117,8 @@ public class Market {
 //        for (Fruit pair : buyerFruitMap.values()) {
 //            if ("Watermelon".equals(pair.getName())) {
 //                count++;
-//                System.out.println("Колличество этого фрукта: " + count);
 //            }
+//                System.out.println("Колличество этого фрукта: " + count);
 //        }
         //7
 //        for (Fruit pair : buyerFruitMap.values()) {
