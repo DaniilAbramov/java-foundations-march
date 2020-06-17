@@ -3,12 +3,19 @@ package interfaces.lecture;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.Serializable;
+
 @Setter
 @Getter
-public class Man implements Walkable, Swimmable, Runnable {
+public class Man implements Walkable, Swimmable, Runnable, Serializable {
     private String sing;
     private int maxRunDistance;
     private double maxSwimSpeed;
+    private String name;
+
+    public Man() {
+
+    }
 
 
     @Override
