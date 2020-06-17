@@ -122,13 +122,10 @@ public class Market {
 //        }
         //7
         for (Fruit pair : buyerFruitMap.values()) {
-            if (!"Watermelon".equals(pair.getName())) {
+            if (!"Watermelon".equals(pair.getName()) || count > 2) {
                 System.out.println(pair.getName());
-            }else {
+            } else {
                 count++;
-                if(count > 2){
-                    System.out.println(pair.getName());
-                }
             }
         }
 
@@ -159,9 +156,9 @@ public class Market {
         //9
         Map<Buyer, Fruit> watermel = new HashMap<>();
 
-        for (Map.Entry<Buyer,Fruit> pair : buyerFruitMap.entrySet()) {
-            if (pair.getValue().getName().equals("Watermelon")){
-                watermel.put(pair.getKey(),pair.getValue());
+        for (Map.Entry<Buyer, Fruit> pair : buyerFruitMap.entrySet()) {
+            if (pair.getValue().getName().equals("Watermelon")) {
+                watermel.put(pair.getKey(), pair.getValue());
             }
         }
         System.out.println("New Map");
