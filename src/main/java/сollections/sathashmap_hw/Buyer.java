@@ -6,7 +6,7 @@ import lombok.Getter;
 @AllArgsConstructor
 @Getter
 public class Buyer {
-    private String name;
+    private final String name;
     private int age;
 
     @Override

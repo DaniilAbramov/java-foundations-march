@@ -6,7 +6,7 @@ import lombok.Getter;
 @AllArgsConstructor
 @Getter
 public class Fruit {
-    private String name;
+    private final String name;
     private double weight;
 
     @Override

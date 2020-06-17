@@ -121,17 +121,16 @@ public class Market {
 //                System.out.println("Колличество этого фрукта: " + count);
 //        }
         //7
-//        for (Fruit pair : buyerFruitMap.values()) {
-//            if (!"Watermelon".equals(pair.getName())) {
-//                System.out.println(pair.getName());
-//
-//            }else {
-//                count++;
-//                if(count > 2){
-//                    System.out.println(pair.getName());
-//                }
-//            }
-//        }
+        for (Fruit pair : buyerFruitMap.values()) {
+            if (!"Watermelon".equals(pair.getName())) {
+                System.out.println(pair.getName());
+            }else {
+                count++;
+                if(count > 2){
+                    System.out.println(pair.getName());
+                }
+            }
+        }
 
 //        char ch = 'A';
 //        System.out.println();
