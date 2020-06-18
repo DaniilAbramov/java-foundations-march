@@ -27,7 +27,7 @@ public class IOPracticeHW {
         String str2 = "Пока, пока, пока!!!!";
 
         File fileWithStr1 = new File("src/main/resources/fileWithStr1.txt");
-        try (PrintWriter printWriter = new PrintWriter(fileWithStr1)){
+        try (PrintWriter printWriter = new PrintWriter(fileWithStr1)) {
             printWriter.println("Привет,привет,привет!!!!");
 
         } catch (FileNotFoundException e) {
@@ -35,17 +35,27 @@ public class IOPracticeHW {
         }
 
         File fileWithStr2 = new File("src/main/resources/fileWithStr2.txt");
-        try (PrintWriter printWriter = new PrintWriter(fileWithStr2)){
+        try (PrintWriter printWriter = new PrintWriter(fileWithStr2)) {
             printWriter.println("Пока, пока, пока!!!!");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
 
-        try(BufferedReader fileReader = new BufferedReader(new FileReader(fileWithStr1))) {
-            System.out.println(fileReader.readLine());
-        }  catch (IOException e) {
+        chekStr(fileWithStr1);
+        chekStr(fileWithStr2);
+
+        try (PrintWriter printWriter = new PrintWriter(fileWithStr1)) {
+            printWriter.println("Пока, пока, пока!!!!");
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+        try (PrintWriter printWriter = new PrintWriter(fileWithStr2)) {
+            printWriter.println("Привет,привет,привет!!!!");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        chekStr(fileWithStr1);
+        chekStr(fileWithStr2);
 
 //        try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(
 //                new FileOutputStream("src/main/resources/fileWithStr1.txt"))){
@@ -71,6 +81,16 @@ public class IOPracticeHW {
 //        }
 
 
+    }
 
+    private static void chekStr(File fileWithStr1) {
+        try (BufferedReader fileReader = new BufferedReader(new FileReader(fileWithStr1))) {
+            System.out.println(fileReader.readLine());
+            while (fileReader.ready()) {
+                System.out.println(fileReader.readLine());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
