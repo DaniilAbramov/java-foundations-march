@@ -2,6 +2,7 @@ package iostreams;
 
 
 import interfaces.lecture.Man;
+import iostreams.HW.User;
 
 import java.io.*;
 
@@ -84,7 +85,6 @@ public class IOPractice {
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-
 
     }
 }
