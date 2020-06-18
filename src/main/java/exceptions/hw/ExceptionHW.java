@@ -9,7 +9,7 @@ public class ExceptionHW  {
 //        throw new NullPointerException("Null");
 
 //        try {
-//            throw new IndexOutOfBoundsException("Null");
+//            throw new IndexOutOfBoundsException("индекс");
 //        } catch (IndexOutOfBoundsException e) {
 //            System.out.println("index");
 //
