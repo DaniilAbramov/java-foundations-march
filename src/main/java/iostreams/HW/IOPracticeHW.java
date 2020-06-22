@@ -1,5 +1,7 @@
 package iostreams.HW;
 
+import interfaces.lecture.Man;
+
 import java.io.*;
 
 public class IOPracticeHW {
@@ -85,6 +87,12 @@ public class IOPracticeHW {
             System.out.println("Введите путь файла и его имя(пример - src/main/resources/file.txt) : ");
             String input = reader.readLine();
             System.out.println("Ваша запись - " + input);
+//            try (ObjectInputStream objectInputStream = new ObjectInputStream(
+//                    new FileInputStream(input))) {
+//                System.out.println(objectInputStream.readObject());
+//            } catch (IOException | ClassNotFoundException e) {
+//                e.printStackTrace();
+//            }
             try (BufferedReader fileReader = new BufferedReader(new FileReader(input))) {
                 System.out.println(fileReader.readLine());
                 while (fileReader.ready()) {
