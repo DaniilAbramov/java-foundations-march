@@ -23,39 +23,39 @@ public class IOPracticeHW {
 //            e.printStackTrace();
 //        }
 
-        String str1 = "Привет,привет,привет!!!!";
-        String str2 = "Пока, пока, пока!!!!";
-
-        File fileWithStr1 = new File("src/main/resources/fileWithStr1.txt");
-        try (PrintWriter printWriter = new PrintWriter(fileWithStr1)) {
-            printWriter.println("Привет,привет,привет!!!!");
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-
-        File fileWithStr2 = new File("src/main/resources/fileWithStr2.txt");
-        try (PrintWriter printWriter = new PrintWriter(fileWithStr2)) {
-            printWriter.println("Пока, пока, пока!!!!");
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-
-        chekStr(fileWithStr1);
-        chekStr(fileWithStr2);
-
-        try (PrintWriter printWriter = new PrintWriter(fileWithStr1)) {
-            printWriter.println("Пока, пока, пока!!!!");
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        try (PrintWriter printWriter = new PrintWriter(fileWithStr2)) {
-            printWriter.println("Привет,привет,привет!!!!");
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        chekStr(fileWithStr1);
-        chekStr(fileWithStr2);
+//        String str1 = "Привет,привет,привет!!!!";
+//        String str2 = "Пока, пока, пока!!!!";
+//
+//        File fileWithStr1 = new File("src/main/resources/fileWithStr1.txt");
+//        try (PrintWriter printWriter = new PrintWriter(fileWithStr1)) {
+//            printWriter.println("Привет,привет,привет!!!!");
+//
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//
+//        File fileWithStr2 = new File("src/main/resources/fileWithStr2.txt");
+//        try (PrintWriter printWriter = new PrintWriter(fileWithStr2)) {
+//            printWriter.println("Пока, пока, пока!!!!");
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//
+//        chekStr(fileWithStr1);
+//        chekStr(fileWithStr2);
+//
+//        try (PrintWriter printWriter = new PrintWriter(fileWithStr1)) {
+//            printWriter.println("Пока, пока, пока!!!!");
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//        try (PrintWriter printWriter = new PrintWriter(fileWithStr2)) {
+//            printWriter.println("Привет,привет,привет!!!!");
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//        chekStr(fileWithStr1);
+//        chekStr(fileWithStr2);
 
 //        try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(
 //                new FileOutputStream("src/main/resources/fileWithStr1.txt"))){
@@ -79,6 +79,35 @@ public class IOPracticeHW {
 //        }catch (IOException e) {
 //            e.printStackTrace();
 //        }
+        String end = "Выход";
+        int count = 0;
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
+            System.out.println("Введите путь файла и его имя(пример - src/main/resources/file.txt) : ");
+            String input = reader.readLine();
+            System.out.println("Ваша запись - " + input);
+            try (BufferedReader fileReader = new BufferedReader(new FileReader(input))) {
+                System.out.println(fileReader.readLine());
+                while (fileReader.ready()) {
+                    System.out.println(fileReader.readLine());
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(
+                    new FileOutputStream(input))) {
+                System.out.println("Введите ваш текст(для выхода напишите выход) - ");
+                String input2;
+                while (!(input2 = reader.readLine()).equalsIgnoreCase(end) || count < 10) {
+                    count++;
+                    System.out.println("Ваша запись - " + input2);
+                    objectOutputStream.writeObject(input2);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
     }
