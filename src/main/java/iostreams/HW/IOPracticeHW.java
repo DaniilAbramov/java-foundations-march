@@ -89,8 +89,9 @@ public class IOPracticeHW {
             System.out.println("Ваша запись - " + input);
 //            try (ObjectInputStream objectInputStream = new ObjectInputStream(
 //                    new FileInputStream(input))) {
-//                System.out.println(objectInputStream.readObject());
-//            } catch (IOException | ClassNotFoundException e) {
+//                String read = objectInputStream.readLine();
+//                System.out.println(read);
+//            } catch (IOException e) {
 //                e.printStackTrace();
 //            }
             try (BufferedReader fileReader = new BufferedReader(new FileReader(input))) {
