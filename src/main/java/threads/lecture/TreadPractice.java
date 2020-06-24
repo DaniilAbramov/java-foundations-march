@@ -1,4 +1,4 @@
-package treads;
+package threads.lecture;
 
 import java.io.PrintWriter;
 

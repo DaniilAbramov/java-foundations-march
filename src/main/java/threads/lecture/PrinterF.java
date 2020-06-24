@@ -1,4 +1,4 @@
-package treads;
+package threads.lecture;
 
 public class PrinterF implements Runnable {
     @Override
