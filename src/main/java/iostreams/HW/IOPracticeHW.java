@@ -3,6 +3,7 @@ package iostreams.HW;
 import interfaces.lecture.Man;
 
 import java.io.*;
+import java.util.ArrayList;
 
 public class IOPracticeHW {
     public static void main(String[] args) {
@@ -83,8 +84,9 @@ public class IOPracticeHW {
 //        }
         String end = "Выход";
         int count = 0;
+        ArrayList<String> list = new ArrayList<String>(10);
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
-            System.out.println("Введите путь файла и его имя(пример - src/main/resources/file.txt) : ");
+            System.out.println("Введите путь файла и его имя(пример - src/main/resources/fileNotebook.txt) : ");
             String input = reader.readLine();
             System.out.println("Ваша запись - " + input);
 //            try (ObjectInputStream objectInputStream = new ObjectInputStream(
@@ -106,9 +108,9 @@ public class IOPracticeHW {
                     new FileOutputStream(input))) {
                 System.out.println("Введите ваш текст(для выхода напишите выход) - ");
                 String input2;
-                while (!(input2 = reader.readLine()).equalsIgnoreCase(end) || count < 10) {
-                    count++;
-                    System.out.println("Ваша запись - " + input2);
+                while (!(input2 = reader.readLine()).equalsIgnoreCase(end) || list.size() == 10) {
+                    list.add(input2);
+                        System.out.println("Ваша запись - " + input2);
                     objectOutputStream.writeObject(input2);
                 }
             } catch (IOException e) {
@@ -117,7 +119,9 @@ public class IOPracticeHW {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        for (String s : list) {
+            System.out.print(s + " ");
+        }
 
     }
 
