@@ -91,9 +91,10 @@ public class IOPracticeHW {
             System.out.println("Ваша запись - " + input);
 //            try (ObjectInputStream objectInputStream = new ObjectInputStream(
 //                    new FileInputStream(input))) {
-//                String read = objectInputStream.readLine();
-//                System.out.println(read);
-//            } catch (IOException e) {
+////                while (objectInputStream.ready()) {
+//                    System.out.println(objectInputStream.readObject());
+////                }
+//            } catch (IOException | ClassNotFoundException e) {
 //                e.printStackTrace();
 //            }
             try (BufferedReader fileReader = new BufferedReader(new FileReader(input))) {
@@ -104,13 +105,14 @@ public class IOPracticeHW {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            String input2 = reader.readLine();
             try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(
-                    new FileOutputStream(input))) {
+                    new FileOutputStream(input2))) {
                 System.out.println("Введите ваш текст(для выхода напишите выход) - ");
-                String input2;
-                while (!(input2 = reader.readLine()).equalsIgnoreCase(end) || list.size() == 10) {
+                while ((!(input2 = reader.readLine()).equalsIgnoreCase(end)) || count == 10) {
+                    count++;
                     list.add(input2);
-                        System.out.println("Ваша запись - " + input2);
+                    System.out.println("Ваша запись - " + input2);
                     objectOutputStream.writeObject(input2);
                 }
             } catch (IOException e) {
