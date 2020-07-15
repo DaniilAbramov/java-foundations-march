@@ -4,11 +4,12 @@ import interfaces.lecture.Man;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.io.File;
 
 public class IOPracticeHW {
     public static void main(String[] args) {
 
-        User user = new User("User", 123456789);
+//        User user = new User("User", 123456789);
 //
 //        try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(
 //                new FileOutputStream("src/main/resources/user.out"))) {
@@ -25,7 +26,7 @@ public class IOPracticeHW {
 //        } catch (IOException | ClassNotFoundException e) {
 //            e.printStackTrace();
 //        }
-
+//
 //        String str1 = "Привет,привет,привет!!!!";
 //        String str2 = "Пока, пока, пока!!!!";
 //
@@ -59,7 +60,7 @@ public class IOPracticeHW {
 //        }
 //        chekStr(fileWithStr1);
 //        chekStr(fileWithStr2);
-
+//
 //        try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(
 //                new FileOutputStream("src/main/resources/fileWithStr1.txt"))){
 //            objectOutputStream.writeObject(str1);
@@ -82,48 +83,75 @@ public class IOPracticeHW {
 //        }catch (IOException e) {
 //            e.printStackTrace();
 //        }
+
+
         String end = "Выход";
         int count = 0;
-        ArrayList<String> list = new ArrayList<String>(10);
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
+        ArrayList<String> list = new ArrayList<>();
+        try (BufferedReader readerPath = new BufferedReader(new InputStreamReader(System.in))) {
             System.out.println("Введите путь файла и его имя(пример - src/main/resources/fileNotebook.txt) : ");
-            String input = reader.readLine();
-            System.out.println("Ваша запись - " + input);
-//            try (ObjectInputStream objectInputStream = new ObjectInputStream(
-//                    new FileInputStream(input))) {
-////                while (objectInputStream.ready()) {
-//                    System.out.println(objectInputStream.readObject());
-////                }
-//            } catch (IOException | ClassNotFoundException e) {
-//                e.printStackTrace();
-//            }
-            try (BufferedReader fileReader = new BufferedReader(new FileReader(input))) {
-                System.out.println(fileReader.readLine());
+            String inputPath = readerPath.readLine();
+            System.out.println("Ваша запись - " + inputPath);
+            try (BufferedReader fileReader = new BufferedReader(new FileReader(inputPath))) {
+
                 while (fileReader.ready()) {
-                    System.out.println(fileReader.readLine());
+                    System.out.print(fileReader.readLine() + " ");
                 }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            String input2 = reader.readLine();
-            try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(
-                    new FileOutputStream(input2))) {
-                System.out.println("Введите ваш текст(для выхода напишите выход) - ");
-                while ((!(input2 = reader.readLine()).equalsIgnoreCase(end)) || count == 10) {
-                    count++;
-                    list.add(input2);
-                    System.out.println("Ваша запись - " + input2);
-                    objectOutputStream.writeObject(input2);
+
+                File myNotebook = new File(inputPath);
+
+                try (BufferedReader readerText = new BufferedReader(new InputStreamReader(System.in))) {
+                    System.out.println("Введите ваш текст(для выхода напишите выход) - ");
+                    String inputText;
+                    try (PrintWriter printWriter = new PrintWriter(myNotebook)) {
+                        while (count == 10 | (!(inputText = readerText.readLine()).equalsIgnoreCase(end))) {
+                            printWriter.println(inputText);
+                                count++;
+                            System.out.println("Ваша запись - " + inputText);
+                        }
+                    }
                 }
-            } catch (IOException e) {
-                e.printStackTrace();
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-        for (String s : list) {
-            System.out.print(s + " ");
-        }
+
+
+//        try (BufferedReader readerPath = new BufferedReader(new InputStreamReader(System.in))) {
+//            System.out.println("Введите путь файла и его имя(пример - src/main/resources/fileNotebook.txt) : ");
+//            String inputPath = readerPath.readLine();
+//            System.out.println("Ваша запись - " + inputPath);
+//
+//            try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(
+//                    new FileOutputStream(inputPath))) {
+//                objectOutputStream.flush();
+//            }
+//            try (BufferedReader fileReader = new BufferedReader(new FileReader(inputPath))) {
+//                while (fileReader.ready()) {
+//                    System.out.println(fileReader.readLine());
+//                }
+//            }
+//            try (BufferedReader readerText = new BufferedReader(new InputStreamReader(System.in))) {
+//                System.out.println("Введите ваш текст(для выхода напишите выход) - ");
+//                String inputText;
+//                try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(
+//                        new FileOutputStream(inputPath))) {
+//                    while ((!(inputText = readerText.readLine()).equalsIgnoreCase(end)) || (list.size() > 10)) {
+//                        objectOutputStream.writeObject(inputText);
+//                        list.add(inputText);
+//                        System.out.println("Ваша запись - " + inputText);
+////                    count++;
+//                    }
+//                    objectOutputStream.flush();
+//                }
+//
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+
 
     }
 

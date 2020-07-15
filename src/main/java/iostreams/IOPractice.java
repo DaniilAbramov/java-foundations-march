@@ -34,7 +34,7 @@ public class IOPractice {
 //        } catch (IOException e) {
 //        e.printStackTrace();
 //        }
-
+//
 //        File file = new File("src/main/resources/file.txt");
 //        try (PrintWriter printWriter = new PrintWriter(file)) {
 //            printWriter.println("Privet");
@@ -54,7 +54,8 @@ public class IOPractice {
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
-
+//        File inputFile = new File("src/main/resources/fileNotebook.out");
+            File file2 = new File("src/main/resources/file2.out");
 //        BufferedReader reader1 = new BufferedReader(new InputStreamReader(System.in));
 //        String end = "Конец";
 //        try {
@@ -67,16 +68,16 @@ public class IOPractice {
 //        }
 
 
-//        Man man = new Man();
-//        man.setName("Vitya");
-//        try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(
-//                new FileOutputStream("src/main/resources/man.out"))) {
-//            objectOutputStream.writeObject(man);
-//            objectOutputStream.flush();
-//
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+        Man man = new Man();
+        man.setName("Vitya");
+        try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(
+                new FileOutputStream("src/main/resources/man.out"))) {
+            objectOutputStream.writeObject(man);
+            objectOutputStream.flush();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         try (ObjectInputStream objectInputStream = new ObjectInputStream(
                 new FileInputStream("src/main/resources/man.out"))) {
