@@ -32,5 +32,17 @@ public class MyJunitRunner {
         System.out.println("_________\n Количество проведенных тестов : "
                 + passedTest + "\n Количество упавших : " + failedTest);
 
+
+        for (Method method : methods) {
+            try {
+                if (method.isAnnotationPresent(MyBefore.class)) {
+                    System.out.println(MyBefore.say);
+                }
+            } catch (Throwable throwable) {
+                System.err.println(method.getName() + " bez before");
+
+            }
+        }
+
     }
 }
